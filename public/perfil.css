@@ -1,0 +1,30 @@
+#box{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: auto;
+  border-top: 4px solid #0073b1;
+  border-radius: 3px;
+  -webkit-box-shadow: 5px 1px 2px -2px rgba(175, 175, 175, 0.967);
+  box-shadow: 5px 5px 1px -2px rgba(175, 175, 175, 0.967);
+  justify-content: center;
+  background-color: white;
+}
+
+.fa-user-circle{
+  font-size: 6rem;
+  margin: 0 auto;
+}
+
+#box h1{
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+#box p{
+  font-family: 'Mukta', sans-serif;
+  margin: 0 auto;
+  margin-top: 10px;
+}

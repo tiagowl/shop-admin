@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  {{ style('reset.css') }}
+  {{ style('main.css') }}
+  {{ style('perfil.css') }}
+</head>
+<body>
+  <header>
+    <div id="perfil">
+      <i class="fas fa-user-circle"></i>
+      <h1><a href="perfil" style="text-decoration: none, color: white" >Tiago</a></h1>
+    </div>
+    <nav id="navbar" >
+      <i class="fas fa-sign-out-alt"></i><a class="option-item" href="/">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <div id="sidebar">
+      <ul id="options">
+        <li><i class="fas fa-home"></i><a class="option-item" href="#">Dashboard</a></li>
+        <li><i class="fas fa-book"></i><a class="option-item" href="addGame">Cadastrar</a></li>
+      </ul>
+    </div>
+    <div id="main-content">
+      <div id="box">
+        <i class="fas fa-user-circle"></i>
+        <h1>{{nome}}</h1>
+        <p>{{senha}}</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

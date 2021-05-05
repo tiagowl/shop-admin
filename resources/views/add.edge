@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  {{ style('reset.css') }}
+  {{ style('main.css') }}
+  {{ style('add.css') }}
+</head>
+<body>
+  <header>
+    <div id="perfil">
+      <i class="fas fa-user-circle"></i>
+      <h1><a href="perfil" style="text-decoration: none, color: white" >Tiago</a></h1>
+    </div>
+    <nav id="navbar" >
+      <i class="fas fa-sign-out-alt"></i><a class="option-item" href="/">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <div id="sidebar">
+      <ul id="options">
+        <li><i class="fas fa-home"></i><a class="option-item" href="main">Dashboard</a></li>
+        <li><i class="fas fa-book"></i><a class="option-item" href="#">Cadastrar</a></li>
+      </ul>
+    </div>
+    <div id="main-content">
+      @if(game)
+      <form id="form" action="editGame/{{game[0].id}}?_method=PUT" method="POST">
+      @else
+      <form id="form" action="cadastrar_game" method="POST">
+      @endif
+        <label>Nome</label>
+        <input name="nome" type="text" value={{game[0].nome}}>
+        <label>Preço</label>
+        <input name="preco" type="number" value={{game[0].preco}}>
+        <label>Plataforma</label>
+        <select name="plataforma" value={{game[0].plataforma}} >
+          <option value="Playstation 5">Playstation 5</option>
+          <option value="Playstation 4">Playstation 4</option>
+          <option value="Xbox Series X">Xbox Series X</option>
+          <option value="Xbox One">Xbox One</option>
+          <option value="Nintendo Switch">Nintendo Switch</option>
+        </select>
+        <label>Promoção porcentagem</label>
+        <input type="number" name="promocao" value={{game[0].desconto}}>
+        @if(game)
+          <button type="submit">Editar</button>
+        @else
+          <button type="submit">Cadastrar</button>
+        @endif
+      </form>
+    </div>
+  </main>
+</body>
+</html>

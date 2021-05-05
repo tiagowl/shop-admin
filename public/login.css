@@ -1,0 +1,62 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue","Fira Sans",Ubuntu,Oxygen,"Oxygen Sans",Cantarell,"Droid Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Emoji","Segoe UI Symbol","Lucida Grande",Helvetica,Arial,sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: #0073b1;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.login{
+  height: auto;
+  width: 352px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px gray;
+  padding: 24px 32px 32px;
+  margin-bottom: 15px;
+  margin-top: 60px;
+}
+
+.login input{
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.6);
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.login input::selection{
+  border: 1px solid #0073b1;
+}
+
+.login h1{
+  font-size: 2rem;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.login button{
+  width: 100%;
+  height: 50px;
+  background-color: #0073b1;
+  padding: 0 24px;
+  border-radius: 28px;
+  border: none;
+  color: white;
+  margin-top: 10px;
+}
+
+#erro{
+  color: red;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}

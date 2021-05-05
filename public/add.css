@@ -1,0 +1,40 @@
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: white;
+  padding: 20px;
+  height: auto;
+  border-top: 4px solid #0073b1;
+  border-radius: 3px;
+  -webkit-box-shadow: 5px 1px 2px -2px rgba(175, 175, 175, 0.967);
+  box-shadow: 5px 5px 1px -2px rgba(175, 175, 175, 0.967);
+}
+
+form label{
+  font-family: 'Mukta', sans-serif;
+  margin-bottom: 5px;
+}
+
+form input, select{
+  margin-bottom: 15px;
+  border: 1px solid rgb(199, 197, 197);
+  border-radius: 5px;
+  height: 32px;
+  width: 600px;
+}
+
+form a{
+  text-decoration: none;
+  color: white;
+}
+
+form button{
+  background-color: #0073b1;
+  border-radius: 4px;
+  border: 1px solid #016faa;
+  color: white;
+  font-family: 'Mukta', sans-serif;
+  height: 37px;
+  width: 100px;
+}

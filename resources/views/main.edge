@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  {{ style('reset.css') }}
+  {{ style('main.css') }}
+</head>
+<body>
+  <header>
+    <div id="perfil">
+      <i class="fas fa-user-circle"></i>
+      <h1><a href="perfil" style="text-decoration: none, color: white" >{{username}}</a></h1>
+    </div>
+    <nav id="navbar" >
+      <i class="fas fa-sign-out-alt"></i><a class="option-item" href="/">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <div id="sidebar">
+      <ul id="options">
+        <li><i class="fas fa-home"></i><a class="option-item" href="#">Dashboard</a></li>
+        <li><i class="fas fa-book"></i><a class="option-item" href="addGame">Cadastrar</a></li>
+      </ul>
+    </div>
+    <div id="main-content">
+      <table id="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Plataforma</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          @each(game in games)
+          <tr>
+            <th scope="row">{{ game.id }}</th>
+            <td>{{ game.nome }}</td>
+            <td>{{ game.preco }}</td>
+            <td>{{ game.plataforma }}</td>
+            <td><button><a href="editGame/{{game.id}}">Editar</a></button></td>
+            <form action="deleteGame/{{game.id}}?_method=DELETE" method="post">
+              <td><button type="submit" style="cursor: pointer" >Excluir</button></td>
+            </form>
+          </tr>
+         @endeach
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
