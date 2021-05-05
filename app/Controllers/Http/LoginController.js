@@ -30,7 +30,7 @@ class LoginController {
 
     console.log(request.input('password'));
 
-    if(!userEmail){
+    if(!userEmail[0]){
       return view.render('login', {erro: "Usuário inexistente"});
     }
 
@@ -39,7 +39,7 @@ class LoginController {
     }else{
       session.put('userId', userEmail[0].id);
       session.put('username', userEmail[0].username);
-      session.put('password', userEmail[0].senha);
+      session.put('password', userEmail[0].password);
 
       const games = await Database.select('*').from('games');
 
