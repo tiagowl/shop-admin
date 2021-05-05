@@ -29,3 +29,5 @@ Route.put('/editGame/editGame/:id', 'GameController.editar');
 Route.post('cadastrar_game', 'GameController.cadastrar');
 Route.delete('deleteGame/:id', 'GameController.excluir');
 Route.get('perfil', 'LoginController.perfil');
+Route.get('editarPerfil', 'LoginController.editarPerfil');
+Route.put('editarPerfil/:id', 'LoginController.editar')

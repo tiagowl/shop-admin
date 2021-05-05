@@ -59,7 +59,19 @@ class LoginController {
     }
   }
 
-  async perfil({view}){
+  async perfil({view, session}){
+
+    return view.render("perfil", {nome: session.get('username'), senha: session.get('password')});
+  }
+
+  async editarPerfil({view, session}){
+    return view.render('editarPerfil', {nome: session.get('username'), senha: session.get('password'), userId: session.get('userId')});
+  }
+
+  async editar({params, view, session, request}){
+    await Database.table('users')
+    .where('id', params.id)
+    .update({username: request.input("nome"), password : request.input("senha")});
 
     return view.render("perfil", {nome: session.get('username'), senha: session.get('password')});
   }
